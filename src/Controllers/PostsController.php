@@ -16,7 +16,8 @@ class PostsController
     }
 
     public function show(){
-        // show single post details
+        $post = Post::find($_GET['id']);
+        view('posts/show', compact('post'));
     }
 
     public function store(){

@@ -1,10 +1,10 @@
 <?php
 
+require __DIR__ . '/../vendor/autoload.php';
+
 if (preg_match('/\.(?:png|jpg|jpeg|gif|css|js)$/', $_SERVER["REQUEST_URI"])) {
     return false;    // serve the requested resource as-is.
 }
-
-require __DIR__ . '/../vendor/autoload.php';
 
 session_start();
 
